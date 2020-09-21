@@ -55,7 +55,9 @@
 
                     </form>
 
-                    <?php
+                    <?php if(isset($_POST["botoncalcular"])):?>
+
+                    <h4 class="text-danger"> <?php
 
                             $precioProducto1=$_POST["precio1"];
                             $nombreProducto1=$_POST["producto1"];
@@ -65,8 +67,11 @@
                             $total=$precioProducto1+$costoEnvio;
 
                             echo("el total de la compra es: ".$total);
-                        }
-                    ?>
+                        ?>
+                     </h4>
+
+                    <?php endif?>
+                    
                 </div>
             </div>
         </div>
