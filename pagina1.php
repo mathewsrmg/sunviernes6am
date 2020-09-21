@@ -56,7 +56,6 @@
                     </form>
 
                     <?php
-                        if(isset($_POST["botoncalcular"])){
 
                             $precioProducto1=$_POST["precio1"];
                             $nombreProducto1=$_POST["producto1"];
