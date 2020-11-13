@@ -57,6 +57,23 @@ class Basedatos{
         //5.retorne los datos consultados!
         return($consultaBuscarDatos->fetchAll());
     }
+    public function eliminarDatos($consultaSQL){
+        //1. se debe establecer una conexion con la BD
+        $conexionBD=$this->conectarBD();
+
+        //2.preparar la consulta para insertar datos
+        $consultaEliminarDatos=$conexionBD->prepare($consultaSQL);
+        
+        //3.ejecutar la consulta
+        $resultado=$consultaEliminarDatos->execute();
+        
+        //4.validar la operacion
+        if($resultado){
+            echo("exito eliminando los datos");
+        }else{
+            echo("error eliminando los datos");
+        }
+    }
 }
 
 ?>

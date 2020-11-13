@@ -49,24 +49,11 @@
                 <button type="submit" class="btn btn-info btn-block" name="botonEnvio">Registrar</button>
             </form>
         </div>
-        <?php
-        include("Basedatos.php");
-            //1.crear una copia de la BD 
-            //crear un ubjeto de la clase BD acceder al metodo
-            $transaccion=new Basedatos();
-            //2.crear la consulta para buscar datos
-            $consultaSQL="SELECT * FROM usuarios WHERE 1";
-            //3.utilizar el metodo consultarDatos
-            $usuarios=$transaccion->consultarDatos($consultaSQL);
 
-            print_r($usuarios);
-
-            foreach
-            
-        ?>
+        <a href="listadoUsuarios">Vista de Usuarios</a>
 
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
 </body>
 </html>
